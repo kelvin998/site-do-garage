@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='homem-do-rock.ico') }}" type="image/x-icon">
+    <title>Garage</title>
+</head>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<body>
+    <head>
+        <!-- outros elementos do cabeçalho -->
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      </head>
+      
+    <header>
+        <h1>
+            Garage Rock
+        </h1>
+        <p>underground</p>
+        <nav>
+            <a href="https://www.facebook.com/oasisbargarage"><i class="fab fa-facebook"></i> Oásis</a>
+            <a href="https://www.facebook.com/BarGlsRock"><i class="fab fa-facebook"></i> GLS-rock</a>
+            <div class="Heavy-dropdown">
+                <a href="#">
+                    <p>Heavy Beer Bar</p>
+                </a>
+                <div class="Heavy-content">
+                    <a href="https://www.facebook.com/heavybeerbar"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com/heavybeerbar/"><i class="fab fa-instagram"></i> instagram</a>
+                </div>
+            </div>
+            <div class="pecado-dropdown">
+                <a href="#">
+                    <p> O pecado mora ao lado</p>
+                </a>
+                <div class="pecado-content">
+                    <a href="https://www.facebook.com/opecadobar"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com/opecadobar/"><i class="fab fa-instagram"></i> instagram</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div style="position: relative;">
+            <img src="{{ url_for('static', filename='gg.jpg') }}" alt="Imagem Garage Rock" usemap="#imagem-map">
+            
+            <map name="imagem-map">
+                <area shape="rect" coords="327,150,430,315" onmouseover="showOverlay2('overlay1')" 
+                onmouseout="hideOverlay('overlay1')">
+                <area shape="rect" coords="100,150,230,315" onmouseover="showOverlay2('overlay2')" 
+                onmouseout="hideOverlay('overlay2')">
+                <area shape="rect" coords="1000,150,1030,315" onmouseover="showOverlay2('overlay3')" 
+                onmouseout="hideOverlay('overlay3')">
+            </map>
+            
+            <div class="overlay" id="overlay1">
+                <p>Bar Oasis</p>
+                <img src="{{ url_for('static', filename='gg3.jpg') }}" alt="Imagem menor">
+            </div>
+            <div class="overlay" id="overlay2">
+                <p>Bar sinuca</p>
+                <img src="{{ url_for('static', filename='sinuca.jpg') }}" alt="Imagem menor">
+            </div>
+            <div class="overlay" id="overlay3">
+                <p>gls rock</p>
+                <img src="{{ url_for('static', filename='gls-rock.jpg') }}" alt="Imagem menor">
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
